@@ -65,3 +65,29 @@
             echo "</tr>";
         }
         echo "</table>";
+        echo"<h3>Brassage de paquet et affichage de cartes brassées</h3>";
+
+        for ($p=0; $p < 26; $p++) { 
+            $q= $p*2; 
+            $l= $q+1;
+            $paquetBrasse[$q] = $paquet1[$p];
+            $paquetBrasse[$l] = $paquet2[$p]; 
+        }
+        
+
+        echo "<table>";
+        for ($i=0; $i < 4 ; $i++) 
+        { 
+            echo "<tr>";
+            for($j=13*$i; $j<13*($i+1); $j++)
+            {
+                echo "<td>$paquetBrasse[$j]</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
+
+    ?>
+
+</body>
+</html>
